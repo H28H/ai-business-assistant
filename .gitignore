@@ -1,0 +1,21 @@
+# Environment variables (NEVER commit these)
+.env
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Virtual environment
+venv/
+.venv/
+
+# macOS system files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Uploaded files (temporary)
+uploads/
