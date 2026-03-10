@@ -1,102 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Business Assistant</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="app-container">
-        
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <div class="logo">
-                    <span class="logo-icon">⚡</span>
-                    <span class="logo-text">AI Assistant</span>
-                </div>
-            </div>
-            
-            <div class="tools-section">
-                <p class="section-label">QUICK TOOLS</p>
-                <button class="tool-btn" onclick="activateTool('email')">
-                    <span>✉️</span> Email Generator
-                </button>
-                <button class="tool-btn" onclick="activateTool('research')">
-                    <span>🔍</span> Company Research
-                </button>
-                <button class="tool-btn" onclick="document.getElementById('pdf-upload').click()">
-                    <span>📄</span> Upload PDF
-                </button>
-                <button class="tool-btn" onclick="document.getElementById('csv-upload').click()">
-                    <span>📊</span> Upload CSV
-                </button>
-            </div>
-            
-            <!-- Hidden file inputs -->
-            <input type="file" id="pdf-upload" accept=".pdf" style="display:none" onchange="handleFileUpload(this, 'pdf')">
-            <input type="file" id="csv-upload" accept=".csv" style="display:none" onchange="handleFileUpload(this, 'csv')">
-            
-            <div class="sidebar-footer">
-                <button class="new-chat-btn" onclick="clearChat()">+ New Chat</button>
-            </div>
-        </div>
-        
-        <!-- Main Chat Area -->
-        <div class="main-area">
-            <div class="chat-header">
-                <h1>AI Business Automation Assistant</h1>
-                <p>Powered by DeepSeek AI</p>
-            </div>
-            
-            <div class="chat-window" id="chat-window">
-                <!-- Welcome message -->
-                <div class="message assistant-message">
-                    <div class="message-avatar">AI</div>
-                    <div class="message-content">
-                        <p>Hello! I'm your AI Business Automation Assistant. I can help you with:</p>
-                        <ul>
-                            <li>📄 <strong>Summarizing PDFs</strong> — Upload a document and I'll extract key insights</li>
-                            <li>📊 <strong>Analyzing CSV data</strong> — Upload a spreadsheet for instant business analysis</li>
-                            <li>✉️ <strong>Writing emails</strong> — Describe the email you need and I'll draft it</li>
-                            <li>🔍 <strong>Company research</strong> — Ask about any company for a detailed report</li>
-                            <li>💬 <strong>General business questions</strong> — Ask me anything</li>
-                        </ul>
-                        <p>How can I help you today?</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Tool Indicator -->
-            <div class="tool-indicator" id="tool-indicator" style="display:none">
-                <span id="tool-indicator-text">Email Generator active</span>
-                <button onclick="deactivateTool()">✕ Cancel</button>
-            </div>
-            
-            <!-- Input Area -->
-            <div class="input-area">
-                <div class="input-container">
-                    <textarea 
-                        id="message-input" 
-                        placeholder="Ask anything... or use the tools in the sidebar"
-                        rows="1"
-                        onkeydown="handleKeyDown(event)"
-                        oninput="autoResize(this)"
-                    ></textarea>
-                    <button class="send-btn" id="send-btn" onclick="sendMessage()">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="22" y1="2" x2="11" y2="13"></line>
-                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                        </svg>
-                    </button>
-                </div>
-                <p class="input-disclaimer">AI responses may contain inaccuracies. Verify critical business information.</p>
-            </div>
-        </div>
-    </div>
-    
-    <script src="/static/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
