@@ -2,7 +2,7 @@
 
 > A production-ready AI-powered assistant designed to automate real business workflows — built as a demonstration of full-stack AI engineering.
 
-🚀 **[Live Demo](https://your-app-name.onrender.com)** ← Update this after deployment
+🚀 **[Live Demo](https://ai-business-assistant-rju8.onrender.com)** ← Update this after deployment
 
 ---
 
